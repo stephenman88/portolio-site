@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import DoCard from "./components/DoCard/DoCard"
+import ProjectCard from "./components/ProjectCard/ProjectCard"
+import portrait from "./assets/linkedin-image.jpg"
 import './App.scss'
 
 function App() {
@@ -21,21 +22,30 @@ function App() {
       <main>
         <section className='about-me'>
           <div className='about-me-container'>
-            <img src='./assets/linkedin-image.jpg' className='about-me-container_portrait'/>
+            <img src={portrait} className='about-me-container_portrait'/>
             <div className='about-me-container-text'>
               <h2 className='about-me-container-text_subheader'>Hi there, I'm</h2>
               <h1 className='about-me-container-text_header'><span className='about-me-container-text_name'>Stephen</span>. Full Stack Developer</h1>
             </div>
           </div>
         </section>
-        <section className='What I do'>
-          
+        <section className='skills'>
+          <DoCard title="API Development" icon={portrait} description=""/>
+          <DoCard title="Responsive Design" icon={portrait} description=""/>
+          <DoCard title="Customized Solutions" icon={portrait} description=""/>
         </section>
-        <section className='Projects'>
-
+        <section className='projects'>
+          <ProjectCard title="Gaijin Arcade" image={portrait} description=""/>
+          <ProjectCard title="Proxy Rabbit" image={portrait} description=""/>
         </section>
-        <section className='Contact'>
-
+        <section className='contact'>
+          <h1 className='contact_header'>Let's Build Something Together!</h1>
+          <p className='contact_text'>Something appealing so people will want to click on the links</p>
+          <div className='contact-links'>
+            <a href='mailto:stephenman88@gmail.com'></a>
+            <a href='https://www.linkedin.com/in/stephenman88'></a>
+            <a href='https://github.com/stephenman88'></a>
+          </div>
         </section>
       </main>
       <footer>
