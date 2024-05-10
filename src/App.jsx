@@ -13,18 +13,18 @@ function App() {
 
   return (
     <>
-      <header className='header'>
-      <nav className='nav-bar'>
-        <h3 className='nav-bar_name'>Stephen Man</h3>
-          <ul className='nav-bar-list'>
-            <li className='nav-bar-list_item'>About Me</li>
-            <li className='nav-bar-list_item'>Projects</li>
-            <li className='nav-bar-list_item'>Contact</li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <section className='about-me'>
+      <header className='header page-padding'>
+        <nav className='nav-bar'>
+          <h3 className='nav-bar_name'>Stephen Man</h3>
+            <ul className='nav-bar-list'>
+              <li className='nav-bar-list_item'>About Me</li>
+              <li className='nav-bar-list_item'>Projects</li>
+              <li className='nav-bar-list_item'>Contact</li>
+            </ul>
+          </nav>
+        </header>
+      <main className='main'>
+        <section className='about-me page-padding'>
           <div className='about-me-container'>
             <img src={portrait} className='about-me-container_portrait'/>
             <div className='about-me-container-text'>
@@ -33,7 +33,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='skills'>
+        <section className='skills page-padding'>
           <h2 className='skills_header'>My Skills</h2>
           <ul className='skills-list'>
             <li className='skills-list_item'>Javascript</li>
@@ -46,11 +46,11 @@ function App() {
             <li className="skills-list_item">Java</li>
           </ul>
         </section>
-        <section className='projects'>
+        <section className='projects page-padding'>
           <ProjectCard title="Gaijin Arcade" image={underDevelopIcon} description=""/>
           <ProjectCard title="Proxy Rabbit" image={proxyRabbitIcon} description=""/>
         </section>
-        <section className='contact'>
+        <section className='contact page-padding'>
           <h1 className='contact_header'>Let's Build Something Together!</h1>
           <p className='contact_text'>Something appealing so people will want to click on the links</p>
           <div className='contact-links'>
