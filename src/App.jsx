@@ -35,6 +35,7 @@ function App() {
         </section>
         <section className='skills page-padding'>
           <h2 className='skills_header'>My Skills</h2>
+          <p className='skills_hook'>This is a paragraph that I will fill out.</p>
           <ul className='skills-list'>
             <li className='skills-list_item'>Javascript</li>
             <li className="skills-list_item">NodeJs</li>
