@@ -1,16 +1,16 @@
 import './ProjectCard.scss';
 
-export default function ProjectCard({title, image, description, popupImages}){
+export default function ProjectCard({title, image, description, popupImages, className}){
 
     function showPopup(popupImages){
         //Implement show popup
     }
 
     return(
-        <div className='do-card' onClick={()=>{showPopup(popupImages)}}>
-            <h3 className='do-card_title'>{title}</h3>
-            <img className='do-card_img' src={image}/>
-            <p className='do-card_description'>{description}</p>
+        <div className={'project-card ' + className } onClick={()=>{showPopup(popupImages)}}>
+            <h3 className='project-card_title'>{title}</h3>
+            <img className='project-card_img' src={image}/>
+            <p className='project-card_description'>{description}</p>
         </div>
     )
 }

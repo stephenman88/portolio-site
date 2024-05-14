@@ -1,2 +1,23 @@
 @use "../../global/styling.scss";
 
+.project-card{
+    box-shadow: 1px 2px 1px 1px lightgray;
+    border-radius: 5%;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    &_title{
+
+    }
+
+    &_img{
+
+    }
+
+    &_description{
+        display: none;
+    }
+}

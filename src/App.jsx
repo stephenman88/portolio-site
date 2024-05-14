@@ -15,7 +15,7 @@ function App() {
     <>
       <header className='header page-padding'>
         <nav className='nav-bar'>
-          <h3 className='nav-bar_name'>Stephen Man</h3>
+          <h3 className='nav-bar_name'>Stephen</h3>
             <ul className='nav-bar-list'>
               <li className='nav-bar-list_item'>About Me</li>
               <li className='nav-bar-list_item'>Projects</li>
@@ -48,16 +48,19 @@ function App() {
           </ul>
         </section>
         <section className='projects page-padding'>
-          <ProjectCard title="Gaijin Arcade" image={underDevelopIcon} description=""/>
-          <ProjectCard title="Proxy Rabbit" image={proxyRabbitIcon} description=""/>
+          <h2 className='projects_header'>Check Out My Work!</h2>
+          <div className='projects-cards'>
+            <ProjectCard title="Gaijin Arcade" image={underDevelopIcon} description="" className="projects-cards_card"/>
+            <ProjectCard title="Proxy Rabbit" image={proxyRabbitIcon} description="A social media app that aims to connect people and allow them to discover the world! Learn about region-exclusive specialties and ask the locals to help you buy them." className="projects-cards_card"/>
+          </div>
         </section>
         <section className='contact page-padding'>
           <h1 className='contact_header'>Let's Build Something Together!</h1>
           <p className='contact_text'>Something appealing so people will want to click on the links</p>
           <div className='contact-links'>
-            <a href='mailto:stephenman88@gmail.com'><img src={emailIcon} alt='Email me!' className='contact-links_icon'/></a>
-            <a href='https://www.linkedin.com/in/stephenman88'><img src={linkedInIcon} alt='Come to my LinkedIn!' className='contact-links_icon'/></a>
-            <a href='https://github.com/stephenman88'><img src={githubIcon} alt='Come see my Github!' className='contact-links_icon'/></a>
+            <a href='mailto:stephenman88@gmail.com' className='contact-links_a'><img src={emailIcon} alt='Email me!' className='contact-links_icon'/></a>
+            <a href='https://www.linkedin.com/in/stephenman88' className='contact-links_a'><img src={linkedInIcon} alt='Come to my LinkedIn!' className='contact-links_icon'/></a>
+            <a href='https://github.com/stephenman88' className='contact-links_a'><img src={githubIcon} alt='Come see my Github!' className='contact-links_icon'/></a>
           </div>
         </section>
       </main>
