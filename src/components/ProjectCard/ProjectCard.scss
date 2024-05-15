@@ -1,2 +1,20 @@
-@use "../../global/styling.scss";
+@use "../../global/styling.scss" as *;
 
+.project-card{
+    box-shadow: 1px 2px 1px 1px lightgray;
+    border-radius: 5%;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    &_title{
+        @include subheader;
+    }
+
+    &_description{
+        display: none;
+        @include body;
+    }
+}
