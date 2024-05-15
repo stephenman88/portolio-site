@@ -26,8 +26,13 @@
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 
+  &_name{
+    @include header;
+  }
+
   &-list{
     display: none;
+    @include body;
     
     @include tablet{
       display: flex;
@@ -96,18 +101,28 @@
   border-top-left-radius: 2rem;
   color: white;
 
+  &_header{
+    align-self: center;
+    @include subheader;
+  }
+
   &-list{
     margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    row-gap: max(4%, 1rem);
+    column-gap: max(5%, calc((100% - 28rem)/3));
+    row-gap: 2rem;
 
     &_item{
-      width: 22%;
       text-align: center;
+      flex: 1;
+      flex-basis: 20%;
+      max-width: 7rem;
     }
   }
 }
@@ -121,25 +136,40 @@
   &_header{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    @include subheader;
+    align-self: center;
   }
 
   &-cards{
     display:flex;
-    justify-content: stretch;
+    justify-content: space-around;
     padding: 1rem 0.5rem 1rem;
     gap: 1rem;
+
+    &_card{
+      max-width: 15rem;
+    }
   }
 }
 
 .contact{
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
   gap: 1rem;
+  background-color: $base-color;
+  color:white;
+
+  &_header{
+    @include header;
+    color:white;
+  }
 
   &_text{
     width: 90%;
+    @include body;
+    color:white;
   }
 
   &-links{
@@ -161,10 +191,6 @@
       width: 100%;
     }
   }
-}
-
-footer{
-  height: 2rem;
 }
 
 @keyframes logo-spin {

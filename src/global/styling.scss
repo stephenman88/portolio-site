@@ -6,6 +6,12 @@ $dark-background: darkslategrey;
 $white-background: white;
 $base-color: #2596be;
 $base-color-opaque: #2596becc;
+$header-mobile: 1rem;
+$header-tablet: 2rem;
+$subheader-mobile: 1rem;
+$subheader-tablet: 1.5rem;
+$body-mobile: 0.75rem;
+$body-tablet: 1rem;
 
 *{
     margin: 0;
@@ -41,5 +47,29 @@ li{
 @mixin desktop{
     @media (min-width: 1280px){
         @content;
+    }
+}
+
+@mixin header{
+    font-size: $header-mobile;
+
+    @include tablet{
+        font-size: $header-tablet;
+    }
+}
+
+@mixin subheader{
+    font-size: $subheader-mobile;
+
+    @include tablet{
+        font-size: $subheader-tablet;
+    }
+}
+
+@mixin body{
+    font-size: $body-mobile;
+
+    @include tablet{
+        font-size: $body-tablet;
     }
 }

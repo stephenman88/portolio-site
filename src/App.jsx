@@ -36,14 +36,13 @@ function App() {
           <div className='about-me-container'>
             <img src={portrait} className='about-me-container_portrait'/>
             <div className='about-me-container-text'>
-              <h1 className='about-me-container-text_subheader'>Hi there, I'm Stephen Man</h1>
+              <h1 className='about-me-container-text_subheader'>Hi there, I'm Stephen Man,</h1>
               <h2 className='about-me-container-text_header'>Full Stack Developer</h2>
             </div>
           </div>
         </section>
         <section className='skills page-padding'>
           <h2 className='skills_header'>My Skills</h2>
-          <p className='skills_hook'>This is a paragraph that I will fill out.</p>
           <ul className='skills-list'>
             <DoCard title="Javascript" icon={jsIcon} className={'skills-list_item'}/>
             <DoCard title="NodeJs" icon={nodeIcon} className={'skills-list_item'}/>
@@ -62,7 +61,8 @@ function App() {
             <ProjectCard title="Proxy Rabbit" image={proxyRabbitIcon} description="A social media app that aims to connect people and allow them to discover the world! Learn about region-exclusive specialties and ask the locals to help you buy them." className="projects-cards_card"/>
           </div>
         </section>
-        <section className='contact page-padding'>
+      </main>
+      <footer className='contact page-padding'>
           <h1 className='contact_header'>Let's Build Something Together</h1>
           <p className='contact_text'>Something appealing so people will want to click on the links</p>
           <div className='contact-links'>
@@ -70,11 +70,7 @@ function App() {
             <a href='https://www.linkedin.com/in/stephenman88' className='contact-links_a'><img src={linkedInIcon} alt='Come to my LinkedIn!' className='contact-links_icon'/></a>
             <a href='https://github.com/stephenman88' className='contact-links_a'><img src={githubIcon} alt='Come see my Github!' className='contact-links_icon'/></a>
           </div>
-        </section>
-      </main>
-      <footer>
-
-      </footer>
+        </footer>
     </>
   )
 }
