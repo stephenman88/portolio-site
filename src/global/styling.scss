@@ -1,7 +1,18 @@
+
+$dark-text: dimgray;
+$light-text: gray;
+$white-text: white;
+$dark-background: darkslategrey;
+$white-background: white;
+$base-color: #2596be;
+$base-color-opaque: #2596becc;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: $base-color;
+    font-family:Verdana;
 }
 
 a{
@@ -23,6 +34,12 @@ li{
 
 @mixin tablet{
     @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: 1280px){
         @content;
     }
 }

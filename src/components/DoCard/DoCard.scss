@@ -1,1 +1,12 @@
-@use '../../global/styling.scss';
+@use '../../global/styling.scss' as *;
+
+.do-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_img{
+        width: 100%;
+    }
+}
