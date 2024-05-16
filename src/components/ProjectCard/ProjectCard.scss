@@ -9,12 +9,34 @@
     align-items: center;
     padding: 2rem;
     gap: 1rem;
+    background-color: $base-color;
+
+    &:hover{
+        background-color: $base-color-dark;
+    }
+
     &_title{
         @include subheader;
+        color: white;
+        flex-grow: 0;
+    }
+
+    &_img{
+        flex-grow: 0;
+        @include tablet{
+            height: 50%;
+        }
     }
 
     &_description{
         display: none;
         @include body;
+        
+        @include tablet{
+            flex-grow: 1;
+            color: white;
+            display: block;
+            padding-top: 1rem;
+        }
     }
 }
