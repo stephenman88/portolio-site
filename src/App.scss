@@ -1,0 +1,247 @@
+@use './global/styling.scss' as *;
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+.page-padding{
+  width: 100%;
+  padding: 0 1.5rem 0;
+
+  @media (min-width: 768px) {
+    padding: 0 2rem 0;
+  }
+
+  @media (min-width: 1280px){
+    padding: 0 5% 0;
+  }
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+
+  &_name{
+    @include header;
+  }
+}
+
+.nav-bar{
+  
+  display: none;
+  @include body;
+  flex-grow: 1;
+
+  @include tablet{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5%;
+    align-items: center;
+  }
+}
+
+.about-me{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: max(3rem, 10%);
+  padding-bottom: max(3rem, 10%);
+  padding-left: 10%;
+  background-image: url('./assets/generic_code.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    gap: 2rem;
+    background-color: $base-color-opaque;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+
+    @include tablet{
+      padding-top: 5%;
+      padding-bottom: 5%;
+      width: 70%;
+      max-width: 40rem;
+    }
+
+    &_portrait{
+      width: 20%;
+      border-radius: 100%;
+      max-width: 4.5rem;
+    }
+
+    &-text{
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      @include tablet{
+        max-width: 40rem;
+      }
+
+      &_subheader{
+        color: white;
+        font-size: 1rem;
+
+        @include subheader;
+      }
+
+      &_header{
+        color: white;
+        font-size: 1rem;
+
+        @include subheader;
+      }
+    }
+  }
+}
+
+.skills{
+  padding-top: max(2rem, 7%);
+  padding-bottom: max(2rem, 7%);
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  border-top-left-radius: 2rem;
+  color: white;
+
+  @include desktop{
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  &_header{
+    align-self: center;
+    @include subheader;
+  }
+
+  &-list{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: max(5%, calc((100% - 28rem)/3));
+    row-gap: 2rem;
+
+    @include tablet{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    &_item{
+      text-align: center;
+      flex: 1;
+      flex-basis: 20%;
+      max-width: 7rem;
+    }
+  }
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+  @include tablet{
+    gap: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  &_header{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    @include subheader;
+    align-self: center;
+  }
+
+  &-cards{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0.5rem 1rem;
+    gap: 1rem;
+
+    @include tablet{
+      justify-content: center;
+      gap: 5%;
+    }
+
+    &_card{
+      max-width: 15rem;
+
+      @include tablet{
+        max-width: 20rem;
+      }
+    }
+  }
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  gap: 1rem;
+  background-color: $base-color;
+  color:white;
+
+  &_header{
+    @include header;
+    color:white;
+  }
+
+  &_text{
+    width: 90%;
+    @include body;
+    color:white;
+  }
+
+  &-links{
+
+    margin-top: 2rem;
+    margin-right: 1rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: max(1rem, 6%);
+
+    &_a{
+      max-width: 10%;
+      width: 2rem;
+    }
+
+    &_icon{
+      width: 100%;
+    }
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
