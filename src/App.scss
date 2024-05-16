@@ -18,7 +18,7 @@
   }
 }
 
-.nav-bar{
+.header{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -29,16 +29,19 @@
   &_name{
     @include header;
   }
+}
 
-  &-list{
-    display: none;
-    @include body;
-    
-    @include tablet{
-      display: flex;
-      column-gap: 1rem;
-      align-items: center;
-    }
+.nav-bar{
+  
+  display: none;
+  @include body;
+  flex-grow: 1;
+
+  @include tablet{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5%;
+    align-items: center;
   }
 }
 
@@ -50,16 +53,25 @@
   padding-bottom: max(3rem, 10%);
   padding-left: 10%;
   background-image: url('./assets/generic_code.jpg');
+  background-position: center;
+  background-size: cover;
 
   &-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 80%;
     gap: 2rem;
     background-color: $base-color-opaque;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+
+    @include tablet{
+      padding-top: 5%;
+      padding-bottom: 5%;
+      width: 70%;
+      max-width: 40rem;
+    }
 
     &_portrait{
       width: 20%;
@@ -72,21 +84,23 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      max-width: 15rem;
+
+      @include tablet{
+        max-width: 40rem;
+      }
 
       &_subheader{
         color: white;
         font-size: 1rem;
-      }
 
-      &_name{
-        color: black;
-        font-size: 2rem;
+        @include subheader;
       }
 
       &_header{
         color: white;
         font-size: 1rem;
+
+        @include subheader;
       }
     }
   }
@@ -100,6 +114,11 @@
   gap: 1rem;
   border-top-left-radius: 2rem;
   color: white;
+
+  @include desktop{
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
 
   &_header{
     align-self: center;
@@ -118,6 +137,11 @@
     column-gap: max(5%, calc((100% - 28rem)/3));
     row-gap: 2rem;
 
+    @include tablet{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
     &_item{
       text-align: center;
       flex: 1;
@@ -132,6 +156,11 @@
   flex-direction: column;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  
+  @include tablet{
+    gap: 1rem;
+    padding-bottom: 2.5rem;
+  }
 
   &_header{
     padding-left: 0.5rem;
@@ -141,13 +170,22 @@
   }
 
   &-cards{
-    display:flex;
+    display: flex;
     justify-content: space-around;
     padding: 1rem 0.5rem 1rem;
     gap: 1rem;
 
+    @include tablet{
+      justify-content: center;
+      gap: 5%;
+    }
+
     &_card{
       max-width: 15rem;
+
+      @include tablet{
+        max-width: 20rem;
+      }
     }
   }
 }
