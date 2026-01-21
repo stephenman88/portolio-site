@@ -6,8 +6,7 @@ import portrait from "../../assets/linkedin-image.jpg"
 import emailIcon from "../../assets/email-icon.svg"
 import githubIcon from "../../assets/github-icon.svg"
 import linkedInIcon from "../../assets/linkedin-icon.svg"
-import proxyRabbitIcon from "../../assets/proxy-rabbit-mascot-shadowless.png"
-import underDevelopIcon from "../../assets/under-development.png"
+import roadRunnerIcon from "../../assets/roadrunnerIcon.png"
 import jsIcon from "../../assets/javascript-155-svgrepo-com.svg"
 import javaIcon from "../../assets/java-svgrepo-com.svg"
 import cssIcon from "../../assets/css3-01-svgrepo-com.svg"
@@ -58,8 +57,7 @@ function Main() {
         <section className='projects page-padding' id='projects'>
           <h2 className='projects_header'>Check Out My Work</h2>
           <div className='projects-cards'>
-            <ProjectCard title="Gaijin Arcade" image={underDevelopIcon} description="A website that helps travellers understand and play arcade games in Japan." className="projects-cards_card"/>
-            <ProjectCard title="Proxy Rabbit" image={proxyRabbitIcon} description="A social media app that aims to connect people and allow them to discover the world! Learn about region-exclusive specialties and ask the locals to help you buy them." className="projects-cards_card"/>
+            <a href='https://www.runningtheroad.ca/home/'><ProjectCard title="RoadRunner" image={roadRunnerIcon} description="A concierge service providing on-demand delivery in the Greater Toronto Area." className="projects-cards_card"/></a>
           </div>
         </section>
       </main>
